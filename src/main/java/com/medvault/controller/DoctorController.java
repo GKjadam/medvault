@@ -18,6 +18,7 @@ public class DoctorController {
     @Autowired
     private DoctorService doctorService;
 
+
     @PostMapping("/api/doctor/register")
     public ResponseEntity<DoctorDTO> createDoctor(@Valid @RequestBody DoctorDTO doctorDTO) {
         DoctorDTO savedDoctorDTO = doctorService.createDoctor(doctorDTO);
